@@ -2,13 +2,11 @@ package com.pawar.inventory.entity;
 
 import java.time.LocalDateTime;
 
-import com.pawar.inventory.entity.Item;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+public class LpnDto {
 
-public class Lpn {
-	
-
-	private int lpn_id;
+	private Integer lpn_id;
 	private String lpn_name;
 	private Item item;
 	private String asn_brcd;
@@ -24,11 +22,10 @@ public class Lpn {
 	private String created_source;
 	private String last_updated_source;
 
-	public Lpn() {
-		// TODO Auto-generated constructor stub
+	public LpnDto() {
 	}
-	
-	public Lpn(int lpn_id, String lpn_name, Item item, String asn_brcd, int quantity, float length, float width,
+
+	public LpnDto(Integer lpn_id, String lpn_name, Item item, String asn_brcd, int quantity, float length, float width,
 			float height, float weight, float volume, int lpn_facility_status, LocalDateTime created_dttm,
 			LocalDateTime last_updated_dttm, String created_source, String last_updated_source) {
 		super();
@@ -49,9 +46,9 @@ public class Lpn {
 		this.last_updated_source = last_updated_source;
 	}
 
-	public Lpn(int lpn_id, String lpn_name, Item item, int quantity, float length, float width, float height,
-			float weight, float volume,int lpn_facility_status, LocalDateTime created_dttm, LocalDateTime last_updated_dttm, String created_source,
-			String last_updated_source) {
+	public LpnDto(Integer lpn_id, String lpn_name, Item item, int quantity, float length, float width, float height,
+			float weight, float volume, int lpn_facility_status, LocalDateTime created_dttm,
+			LocalDateTime last_updated_dttm, String created_source, String last_updated_source) {
 		super();
 		this.lpn_id = lpn_id;
 		this.lpn_name = lpn_name;
@@ -69,11 +66,23 @@ public class Lpn {
 		this.last_updated_source = last_updated_source;
 	}
 
-	public int getLpn_id() {
+	public LpnDto(String lpn_name, Item item, int quantity, LocalDateTime created_dttm, LocalDateTime last_updated_dttm,
+			String created_source, String last_updated_source) {
+		super();
+		this.lpn_name = lpn_name;
+		this.item = item;
+		this.quantity = quantity;
+		this.created_dttm = created_dttm;
+		this.last_updated_dttm = last_updated_dttm;
+		this.created_source = created_source;
+		this.last_updated_source = last_updated_source;
+	}
+
+	public Integer getlpn_id() {
 		return lpn_id;
 	}
 
-	public void setLpn_id(int lpn_id) {
+	public void setlpn_id(Integer lpn_id) {
 		this.lpn_id = lpn_id;
 	}
 
@@ -84,9 +93,6 @@ public class Lpn {
 	public void setLpn_name(String lpn_name) {
 		this.lpn_name = lpn_name;
 	}
-	
-	
-	
 
 	public Item getItem() {
 		return item;
@@ -96,8 +102,6 @@ public class Lpn {
 		this.item = item;
 	}
 
-	
-	
 	public String getAsn_brcd() {
 		return asn_brcd;
 	}
@@ -196,7 +200,7 @@ public class Lpn {
 
 	@Override
 	public String toString() {
-		return "Lpn [lpn_id=" + lpn_id + ", lpn_name=" + lpn_name + ", item=" + item + ", asn_brcd=" + asn_brcd
+		return "LpnDto [lpn_id=" + lpn_id + ", lpn_name=" + lpn_name + ", item=" + item + ", asn_brcd=" + asn_brcd
 				+ ", quantity=" + quantity + ", length=" + length + ", width=" + width + ", height=" + height
 				+ ", weight=" + weight + ", volume=" + volume + ", lpn_facility_status=" + lpn_facility_status
 				+ ", created_dttm=" + created_dttm + ", last_updated_dttm=" + last_updated_dttm + ", created_source="
