@@ -10,13 +10,11 @@ import com.pawar.inventory.entity.Lpn;
 public class Inventory {
 
 	private int inventory_id;
-	
 
 	private Lpn lpn;
-	
-	
+
 	private Item item;
-	private float on_hand_qty;	
+	private float on_hand_qty;
 	private Location location;
 	private String locn_class;
 	private LocalDateTime created_dttm;
@@ -28,8 +26,8 @@ public class Inventory {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Inventory(int inventory_id, Lpn lpn, Item item, float on_hand_qty, Location location,
-			String locn_class, LocalDateTime created_dttm, LocalDateTime last_updated_dttm, String created_source,
+	public Inventory(int inventory_id, Lpn lpn, Item item, float on_hand_qty, Location location, String locn_class,
+			LocalDateTime created_dttm, LocalDateTime last_updated_dttm, String created_source,
 			String last_updated_source) {
 		this.inventory_id = inventory_id;
 		this.lpn = lpn;
@@ -125,12 +123,9 @@ public class Inventory {
 
 	@Override
 	public String toString() {
-		return "Inventory [inventory_id=" + inventory_id + ", lpn=" + lpn + ", item=" + item
-				+ ", created_dttm=" + created_dttm + ", last_updated_dttm=" + last_updated_dttm + ", created_source="
-				+ created_source + ", last_updated_source=" + last_updated_source + "]";
+		return "Inventory [inventory_id=" + inventory_id + ", lpn=" + lpn + ", item=" + item + ", created_dttm="
+				+ created_dttm + ", last_updated_dttm=" + last_updated_dttm + ", created_source=" + created_source
+				+ ", last_updated_source=" + last_updated_source + "]";
 	}
-	
-	
 
-	
 }

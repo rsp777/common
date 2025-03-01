@@ -52,11 +52,11 @@ public class Item {
 		this.item_id = item_id;
 	}
 
-	public String getItem_name() {
+	public String getItemName() {
 		return itemName;
 	}
 
-	public void setItem_name(String itemName) {
+	public void setItemName(String itemName) {
 		this.itemName = itemName;
 	}
 
