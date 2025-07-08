@@ -148,5 +148,4 @@ public class Item {
 				+ last_updated_dttm + ", created_source=" + created_source + ", last_updated_source="
 				+ last_updated_source + "]";
 	}
-
 }

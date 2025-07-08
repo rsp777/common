@@ -203,5 +203,6 @@ public class SopEligibleItemsDto {
 				+ isAssigned + ", createdDttm=" + createdDttm + ", lastUpdatedDttm=" + lastUpdatedDttm
 				+ ", createdSource=" + createdSource + ", lastUpdatedSource=" + lastUpdatedSource + "]";
 	}
-
+	
+	
 }
